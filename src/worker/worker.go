@@ -34,8 +34,8 @@ func InitWorkPool() {
 	Workers.JobChans = make(chan job.JobChan, MAXWORKCNT)
 	Workers.quit = make(chan bool)
 	for i := 0; i < MAXWORKCNT; i++{
-		wolker := new(Worker)
-		wolker.Run()
+		worker := new(Worker)
+		worker.Run()
 	}
 }
 
